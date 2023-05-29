@@ -1,7 +1,47 @@
-@import "mixin.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@mixin font-st {
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin font-heading {
+    font-size: 32px;
+}
+
+@mixin font-p {
+    font-size: 16px;
+}
+
+$bl1: #5CE1E6;
+$bl2: #4CBBBF;
+$blck: #000;
+$wht: #fff;
+$wht2: #E5F3FF;
+
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-ev {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@mixin col{
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
 *{
     margin: 0px;
     padding: 0px;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -27,6 +67,7 @@ p{
 
 #hero-section {
     margin-bottom: 200px;
+    animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     header{
         @include flex;
         align-items: center;
@@ -55,6 +96,7 @@ p{
         justify-content: center;
         align-items: center;
         margin-top: 100px;
+        
         #author-picture{
             img {
                 border-radius: 60%;
@@ -169,6 +211,7 @@ p{
 #skills{
     color: $wht;
     padding-top: 50px;
+    padding-bottom: 150px;
     .main-heading{
         h2{
             color: $wht;
@@ -210,6 +253,9 @@ p{
             width: 20%;
             img{
                 width: 100%;
+                &:hover{
+                    opacity: 0.4;
+                }
             }
             .project-txt{
                 background-color: $bl2;
@@ -327,10 +373,14 @@ p{
 footer{
     @include flex-ev;
     background-color: $wht2;
+    margin-top: 50px;
     .sass{
         padding-top: 10px;
         padding-bottom: 10px;
         a{
+            .fa-solid{
+                padding-top: 0px;
+            }
             i{
                 font-size: 30px;
                 color: $blck;
@@ -338,3 +388,348 @@ footer{
         }
     }
 }
+
+
+
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1043px) {
+    #hero-section {
+       nav {
+        ul{
+            li{
+                a{
+                    font-size: 22px;
+                    padding: 5px;
+                }
+            }
+        }
+       }
+       #author{
+        #author-heading{
+            .heading{
+                h1{
+                    font-size: 30px;
+                }
+                h2{
+                    font-size: 18px;
+                }
+            }
+        }
+       }  
+    }
+    #projects{
+        #web{
+            .site{
+                width: 25%;
+            }
+        }
+    }
+    #contact{
+        #ways{
+            .option{
+                width:40%;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 939px) {
+    #hero-section {
+        #author{
+            #author-heading{
+                .heading{
+                    h2{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    #contact{
+        #ways{
+            .option{
+                width:40%;
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 867px) {
+    #hero-section {
+        nav {
+         ul{
+             li{
+                 a{
+                     font-size: 20px;
+                     padding: 3px;
+                 }
+             }
+         }
+        }
+        #author{
+         #author-heading{
+             .heading{
+                 h1{
+                     font-size: 27px;
+                 }
+                 h2{
+                     font-size: 15px;
+                 }
+             }
+         }
+        }  
+     }
+     #projects{
+        #web{
+            .site{
+                width:30%;
+            }
+        }
+    }
+
+ }
+
+
+ @media screen and (max-width: 783px) {
+    #hero-section{
+        header{
+            flex-direction: column;
+            #logo{
+                margin-bottom: 50px;
+            }
+            nav{
+                ul{
+                    li{
+                        a{
+                            font-size: 18px;
+                            padding: 25px
+                        }
+                    }
+                }
+            }
+        }
+        #author{
+            #author-heading{
+                .heading{
+                    h1{
+                        font-size: 24px;
+                    }
+                    h2{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    #skills{
+        .services{
+            .services-blocks{
+                .block2{
+                    width: 20%;
+                }
+            }
+        }
+    }
+ }
+
+ @media screen and (max-width: 721px) {
+    #hero-section{
+        header{
+            nav{
+                ul{
+                    li{
+                        a{
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        #author{
+            #author-heading{
+                .heading{
+                    h1{
+                        font-size: 21px;
+                    }
+                    h2{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+    #skills{
+        .services{
+            .services-blocks{
+                .block2{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    #projects{
+        #web{
+            .site{
+                width: 35%;
+            }
+        }
+    }
+    #contact{
+        #ways{
+            .option{
+                width:40%;
+                p{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+ }
+
+
+ @media screen and (max-width: 600px) {
+    #hero-section{
+    header{   
+            nav{
+                ul{
+                    @include flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    li{
+                        display: block;
+                        padding: 5px;
+                        a{
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+            #logo{
+                width: 25%;
+            }
+        }
+        #author{
+            flex-direction: column;
+            margin-top: 60px;
+            #author-picture{
+                width: 60%;
+            }
+            #author-heading{
+                margin-top: 20px;
+                width:80%;
+                .heading{
+                    h2{
+                        font-size: 15px;
+                    }
+                }
+            }
+        } 
+    }
+    #about-section{
+        #main{
+            @include flex;
+            @include col;
+            align-items: center;
+            #info{
+                width: 80%;
+            }
+            #path{
+                width: 80%;
+            }
+        }
+    }
+    #skills{
+        .services{
+            .services-blocks{
+                @include flex;
+                @include col;
+                align-items: center;
+                .block2{
+                    width: 80%;
+                }
+            }
+        }
+    }
+    #projects{
+        #web{
+            @include flex;
+            @include col;
+            align-items: center;
+            .site{
+                width: 80%;
+                padding-bottom: 40px;
+            }
+        }
+    }
+    #contact{
+        #ways{
+            @include flex;
+            @include col;
+            align-items: center;
+            .option{
+                width:80%;
+                border: none;
+                border-top: 2px solid $bl1;
+                p{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+ }
+
+ @media screen and (max-width: 480px) {
+    #hero-section{
+        header{
+            nav{
+                ul{
+                    li{
+                        a{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            #logo{
+                width: 35%;
+            }
+        }
+    }
+    #contact{
+        #ways{
+            .option{
+                #contact-form{
+                    #btn{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+ }
+
+  

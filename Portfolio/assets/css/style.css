@@ -2,6 +2,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,6 +28,7 @@ p {
 
 #hero-section {
   margin-bottom: 200px;
+  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 #hero-section header {
   display: flex;
@@ -167,6 +169,7 @@ p {
 #skills {
   color: #fff;
   padding-top: 50px;
+  padding-bottom: 150px;
 }
 #skills .main-heading h2 {
   color: #fff;
@@ -210,6 +213,9 @@ p {
 }
 #projects #web .site img {
   width: 100%;
+}
+#projects #web .site img:hover {
+  opacity: 0.4;
 }
 #projects #web .site .project-txt {
   background-color: #4CBBBF;
@@ -321,12 +327,202 @@ footer {
   display: flex;
   justify-content: space-evenly;
   background-color: #E5F3FF;
+  margin-top: 50px;
 }
 footer .sass {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+footer .sass a .fa-solid {
+  padding-top: 0px;
+}
 footer .sass a i {
   font-size: 30px;
   color: #000;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1043px) {
+  #hero-section nav ul li a {
+    font-size: 22px;
+    padding: 5px;
+  }
+  #hero-section #author #author-heading .heading h1 {
+    font-size: 30px;
+  }
+  #hero-section #author #author-heading .heading h2 {
+    font-size: 18px;
+  }
+  #projects #web .site {
+    width: 25%;
+  }
+  #contact #ways .option {
+    width: 40%;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 939px) {
+  #hero-section #author #author-heading .heading h2 {
+    font-size: 16px;
+  }
+  #contact #ways .option {
+    width: 40%;
+  }
+  #contact #ways .option p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 867px) {
+  #hero-section nav ul li a {
+    font-size: 20px;
+    padding: 3px;
+  }
+  #hero-section #author #author-heading .heading h1 {
+    font-size: 27px;
+  }
+  #hero-section #author #author-heading .heading h2 {
+    font-size: 15px;
+  }
+  #projects #web .site {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 783px) {
+  #hero-section header {
+    flex-direction: column;
+  }
+  #hero-section header #logo {
+    margin-bottom: 50px;
+  }
+  #hero-section header nav ul li a {
+    font-size: 18px;
+    padding: 25px;
+  }
+  #hero-section #author #author-heading .heading h1 {
+    font-size: 24px;
+  }
+  #hero-section #author #author-heading .heading h2 {
+    font-size: 13px;
+  }
+  #skills .services .services-blocks .block2 {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 721px) {
+  #hero-section header nav ul li a {
+    padding: 10px;
+  }
+  #hero-section #author #author-heading .heading h1 {
+    font-size: 21px;
+  }
+  #hero-section #author #author-heading .heading h2 {
+    font-size: 10px;
+  }
+  #skills .services .services-blocks .block2 {
+    font-size: 12px;
+  }
+  #projects #web .site {
+    width: 35%;
+  }
+  #contact #ways .option {
+    width: 40%;
+  }
+  #contact #ways .option p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #hero-section header nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #hero-section header nav ul li {
+    display: block;
+    padding: 5px;
+  }
+  #hero-section header nav ul li a {
+    font-size: 22px;
+  }
+  #hero-section header #logo {
+    width: 25%;
+  }
+  #hero-section #author {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+  #hero-section #author #author-picture {
+    width: 60%;
+  }
+  #hero-section #author #author-heading {
+    margin-top: 20px;
+    width: 80%;
+  }
+  #hero-section #author #author-heading .heading h2 {
+    font-size: 15px;
+  }
+  #about-section #main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about-section #main #info {
+    width: 80%;
+  }
+  #about-section #main #path {
+    width: 80%;
+  }
+  #skills .services .services-blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  #skills .services .services-blocks .block2 {
+    width: 80%;
+  }
+  #projects #web {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  #projects #web .site {
+    width: 80%;
+    padding-bottom: 40px;
+  }
+  #contact #ways {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact #ways .option {
+    width: 80%;
+    border: none;
+    border-top: 2px solid #5CE1E6;
+  }
+  #contact #ways .option p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #hero-section header nav ul li a {
+    font-size: 18px;
+  }
+  #hero-section header #logo {
+    width: 35%;
+  }
+  #contact #ways .option #contact-form #btn {
+    width: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */
