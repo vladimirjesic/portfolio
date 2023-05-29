@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@mixin font-st {
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin font-heading {
+    font-size: 32px;
+}
+
+@mixin font-p {
+    font-size: 16px;
+}
+
+$bl1: #5CE1E6;
+$bl2: #4CBBBF;
+$blck: #000;
+$wht: #fff;
+$wht2: #E5F3FF;
+
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-ev {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@mixin col{
+    flex-direction: column;
+}
