@@ -322,3 +322,19 @@ p{
 .brdr-l {
     border-left: 1px solid $bl1;
 }
+
+
+footer{
+    @include flex-ev;
+    background-color: $wht2;
+    .sass{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        a{
+            i{
+                font-size: 30px;
+                color: $blck;
+            }
+        }
+    }
+}
